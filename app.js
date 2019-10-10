@@ -1,3 +1,11 @@
+
+
+
+  // Your web app's Firebase configuration
+  
+
+
+
 // pass original date in seconds (unix) and rate in minutes
 const getNext = (original, rate) => {
   
@@ -23,6 +31,13 @@ const getNext = (original, rate) => {
     if(train.length === 0 || destination.length === 0|| time.length === 0|| frequency.length === 0){
         alert('you are missing a field please try again')
     } else {
+        db.collection('users').doc(document.querySelector('add-train')).set({
+            train: train,
+            destination: destination,
+            time: time,
+            frequency: frequency
+          })
+        
         let tr = document.createElement('tr')
           // delete button is given a data attribute to match id for easy deletion
           tr.innerHTML = `
