@@ -22,6 +22,16 @@ const getNext = (original, rate) => {
     let frequency = document.getElementById("frequency-input").value;
     if(train.length === 0 || destination.length === 0|| time.length === 0|| frequency.length === 0){
         alert('you are missing a field please try again')
+    } else {
+        let tr = document.createElement('tr')
+          // delete button is given a data attribute to match id for easy deletion
+          tr.innerHTML = `
+          <td>${train}</td>
+          <td>${destination}</td>
+          <td>${time}</td>
+          <td>${frequency}</td>
+          `
+          document.getElementById('tableMe').append(tr)
     }
     console.log(train)
     console.log(destination)
