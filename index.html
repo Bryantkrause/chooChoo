@@ -14,53 +14,68 @@
     <div class="container">
             
             
-            <div class="row">
-                    <div class="col s12">
-                      <div class="card blue-grey darken-1">
-                        <div class="card-content white-text">
-                          <span class="card-title">Card Title</span>
-                          <p>I am a very simple card. I am good at containing small bits of information.
-                          I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                                <div class="divider"></div>
-                                <div class="section">
-                                  <h5>Section 1</h5>
-                                  <p>Stuff</p>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="section">
-                                  <h5>Section 2</h5>
-                                  <p>Stuff</p>
-                                </div>
-                                </div>
-                      </div>
-                    </div>
-                  </div>
+            <table class="striped centered" id="tableMe">
+                    <thead>
+                      <tr>
+                          <th>Train Name</th>
+                          <th>Destination</th>
+                          <th>Frequency (min)</th>
+                          <th>Next Arrival</th>
+                          <th>Minutes Away</th>
+                      </tr>
+                    </thead>
+            
+                    <tbody>
+                      <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                        <td>$0.87</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                        <td>$3.76</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                        <td>$7.00</td>
+                        <td>$0.87</td>
+                      </tr>
+                      <tr>
+                        <td>Jonathan</td>
+                         <td>Lollipop</td>
+                         <td>$7.00</td>
+                         <td>$7.00</td>
+                         <td>$0.87</td>
+                          </tr>
+                    </tbody>
+                  </table>
 
-          <div class="row">
-                <div class="col s12">
-                  <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
-                      <span class="card-title">Card Title</span>
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                            <div class="divider"></div>
-                            <div class="section">
-                              <h5>Section 1</h5>
-                              <p>Stuff</p>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="section">
-                              <h5>Section 2</h5>
-                              <p>Stuff</p>
-                            </div>
-                            </div>
-                  </div>
-                </div>
-              </div>
+                  <form role="form">
+                        <div class="form-group row">
+                          <label for="train-input">Train Name</label>
+                          <input class="train-control" id="train-input" type="text">
+                        </div>
+                        <div class="form-group row">
+                                <label for="Destination-input">Destination</label>
+                                <input class="Destination-control" id="Destination-input" type="text">
+                              </div>
+                        <div class="form-group row">
+                          <label for="Time-input">First Train Time (HH:mm - military time)</label>
+                          <input class="Time-control" id="Time-input">
+                        </div>
+                        <div class="form-group row">
+                                <label for="Frequency-input">Frequency</label>
+                                <input class="Frequency-control" id="Frequency-input" type="text">
+                              </div>
+                        <button class="btn btn-default" id="add-train" type="submit">Submit</button>
+                      </form>
 
     
 </body>
