@@ -63,16 +63,16 @@
                           <input class="train-control" id="train-input" type="text">
                         </div>
                         <div class="form-group row">
-                                <label for="Destination-input">Destination</label>
-                                <input class="Destination-control" id="Destination-input" type="text">
+                                <label for="destination-input">Destination</label>
+                                <input class="destination-control" id="destination-input" type="text">
                               </div>
                         <div class="form-group row">
-                          <label for="Time-input">First Train Time (HH:mm - military time)</label>
-                          <input class="Time-control" id="Time-input">
+                          <label for="time-input">First Train Time (HH:mm - military time)</label>
+                          <input class="time-control" id="time-input">
                         </div>
                         <div class="form-group row">
-                                <label for="Frequency-input">Frequency</label>
-                                <input class="Frequency-control" id="Frequency-input" type="text">
+                                <label for="frequency-input">Frequency</label>
+                                <input class="frequency-control" id="frequency-input" type="text">
                               </div>
                         <button class="btn btn-default" id="add-train" type="submit">Submit</button>
                       </form>
@@ -80,25 +80,8 @@
     
 </body>
 
-<script>
 
-// pass original date in seconds (unix) and rate in minutes
-const getNext = (original, rate) => {
-  
-  const rateInSeconds = rate * 60
-
-  const now = moment().unix()
-
-  let lapse = original
-
-  while (lapse < now) {
-    lapse += rateInSeconds
-  }
-
-  return moment((lapse + rate), 'X').format('MMMM, Do YYYY hh:mm a')
-}
-
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./app.js"></script>
             
 </html>
